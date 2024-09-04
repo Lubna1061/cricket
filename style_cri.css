@@ -1,0 +1,161 @@
+body{
+    background-color: rgb(236, 209, 174);
+}
+
+button {
+cursor: pointer;
+font-weight: bold;
+color: #0011ff;
+background-color: #f8f8fd;
+padding: 0.5em 2.2em;
+border-radius: 50em;
+border: 3px solid #8b93f8;
+box-shadow: 0px 8px #1f35ff;
+}
+button:active {
+position: relative;
+border: 6px solid #646fff;
+box-shadow: 0px 0px;
+}
+
+#score{
+margin-top: 10%;
+margin-left: 30%;
+}
+#first{
+      margin-left: 20%;           
+}
+#second{
+       margin-left:30%;
+       margin-top: -4%;
+}
+#third{
+margin-left: 40%;
+margin-top: -4%;
+}
+#fourth{  
+margin-left: 50%;
+margin-top: -4%;
+    }
+    #sixth{ 
+      margin-left: 60%;
+      margin-top: -4%;
+    }
+    #out{
+        margin-left: 23%;
+        margin-top: 4%;
+}
+#wikt{
+margin-left: 35%;
+margin-top: -3.8%;
+
+}
+#wide{
+margin-left: 50%;
+margin-top: -3.8%;
+}
+
+#over{
+margin-left: 30%;
+margin-top: 2%;
+}
+#team{
+margin-left: 45%;
+margin-top: -4%;
+}
+
+#result{
+margin-top: 5%;
+margin-left: 5%;
+font-size: large;
+}
+#result2{
+margin-top: 7%;
+}
+.flip-card {
+background-color: transparent;
+width: 350px;
+height: 350px;
+perspective: 1000px;
+margin-left: 30%;
+margin-top: 5%;
+border-radius: 20px;
+background: #07182E;
+overflow: hidden;
+position: relative;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+place-content: center;
+place-items: center;
+}
+
+.flip-card::before {
+content: '';
+position: absolute;
+width: 150px;
+background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+height: 130%;
+-webkit-animation: rotBGimg 3s linear infinite;
+  animation: rotBGimg 3s linear infinite;
+-webkit-transition: all 0.2s linear;
+transition: all 0.2s linear;
+}
+
+@-webkit-keyframes rotBGimg {
+from {
+-webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+to {
+-webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+}
+
+@keyframes rotBGimg {
+from {
+-webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+to {
+-webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+}
+
+.flip-card::after {
+content: '';
+position: absolute;
+background: white;
+inset: 5px;
+border-radius: 15px;
+}
+
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.8s;
+transform-style: preserve-3d;
+z-index: 1; 
+}
+
+.flip-card-front, .flip-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+color: #0011ff; 
+}
+
+.flip-card-back {
+transform: rotateY(180deg);
+}
+
+.flip-card-inner.flip {
+transform: rotateY(180deg);
+}
